@@ -70,7 +70,13 @@ pip3 install --no-cache-dir -r requirements.txt
 ### Criar as migrações
 - *sempre que modificar algum model ou adicionar/remover alguma lib*
 ```
+makemigrations myapp --pythonpath='apps'
 python3 manage.py makemigrations auth attachment config django_celery_results notification post_office
+```
+
+### Criar o superuser
+```
+python3 manage.py createsuperuser
 ```
 
 ### Aplicar as migrações no banco de dados
